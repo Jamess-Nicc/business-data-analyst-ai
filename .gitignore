@@ -21,3 +21,11 @@ htmlcov/
 
 # Generated data
 data/generated/
+
+# Python virtual environments
+.venv/
+.venv311/
+
+# Python cache
+__pycache__/
+*.py[cod]
