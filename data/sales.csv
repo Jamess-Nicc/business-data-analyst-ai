@@ -1,18 +1,27 @@
-order_id,date,product,category,quantity,unit_price,region
+order_id,date,product,category,quantity,unit_price,region,customer_id,sales_channel,payment_method,discount,cost_per_unit,salesperson
 
-
-ORD001,2026-10-01,Wireless Mouse,Electronics,3,450,Metro Manila
-ORD002,2026-10-01,USB Keyboard,Electronics,2,650,Metro Manila
-ORD003,2026-10-02,Notebook,Stationery,10,50,Central Luzon
-ORD004,2026-10-02,Ballpen,Stationery,20,15,Central Luzon
-ORD005,2026-10-03,Wireless Mouse,Electronics,5,450,Cebu
-ORD006,2026-10-03,Office Chair,Furniture,2,3500,Metro Manila
-ORD007,2026-10-04,Notebook,Stationery,15,50,Cebu
-ORD008,2026-10-04,USB Keyboard,Electronics,4,650,Davao
-ORD009,2026-10-05,Office Chair,Furniture,1,3500,Central Luzon
-ORD010,2026-10-05,Ballpen,Stationery,30,15,Metro Manila
-ORD011,2026-10-06,Wireless Mouse,Electronics,2,450,Davao
-ORD012,2026-10-06,Notebook,Stationery,8,50,Metro Manila
-ORD013,2026-10-07,USB Keyboard,Electronics,3,650,Cebu
-ORD014,2026-10-07,Office Chair,Furniture,3,3500,Davao
-ORD015,2026-10-08,Ballpen,Stationery,25,15,Cebu
+ORD001,2026-10-01,Wireless Mouse,Electronics,3,450,Metro Manila,CUST001,Online,GCash,0,280,EMP001
+ORD002,2026-10-01,USB Keyboard,Electronics,2,650,Metro Manila,CUST002,Physical Store,Cash,50,420,EMP002
+ORD003,2026-10-02,Notebook,Stationery,10,50,Central Luzon,CUST003,Online,Maya,0,30,EMP001
+ORD004,2026-10-02,Ballpen,Stationery,20,15,Central Luzon,CUST004,Physical Store,Cash,0,8,EMP003
+ORD005,2026-10-03,Wireless Mouse,Electronics,5,450,Cebu,CUST005,Online,GCash,100,280,EMP002
+ORD006,2026-10-03,Office Chair,Furniture,2,3500,Metro Manila,CUST006,Physical Store,Bank Transfer,500,2200,EMP004
+ORD007,2026-10-04,Notebook,Stationery,15,50,Cebu,CUST007,Online,Maya,0,30,EMP001
+ORD008,2026-10-04,USB Keyboard,Electronics,4,650,Davao,CUST008,Online,GCash,100,420,EMP003
+ORD009,2026-10-05,Office Chair,Furniture,1,3500,Central Luzon,CUST009,Physical Store,Cash,0,2200,EMP004
+ORD010,2026-10-05,Ballpen,Stationery,30,15,Metro Manila,CUST010,Online,GCash,0,8,EMP001
+ORD011,2026-10-06,Wireless Mouse,Electronics,2,450,Davao,CUST001,Online,Maya,0,280,EMP002
+ORD012,2026-10-06,Notebook,Stationery,8,50,Metro Manila,CUST011,Physical Store,Cash,0,30,EMP003
+ORD013,2026-10-07,USB Keyboard,Electronics,3,650,Cebu,CUST012,Online,GCash,50,420,EMP001
+ORD014,2026-10-07,Office Chair,Furniture,3,3500,Davao,CUST013,Physical Store,Bank Transfer,300,2200,EMP004
+ORD015,2026-10-08,Ballpen,Stationery,25,15,Cebu,CUST014,Online,Maya,0,8,EMP002
+ORD016,2026-10-08,Monitor,Electronics,2,7800,Metro Manila,CUST015,Physical Store,Credit Card,1000,5900,EMP004
+ORD017,2026-10-09,Printer,Office Equipment,1,6500,Central Luzon,CUST016,Online,Bank Transfer,500,4800,EMP003
+ORD018,2026-10-09,Notebook,Stationery,25,50,Davao,CUST017,Online,GCash,0,30,EMP001
+ORD019,2026-10-10,USB Flash Drive,Electronics,6,350,Cebu,CUST018,Online,Maya,100,210,EMP002
+ORD020,2026-10-10,Desk Lamp,Furniture,4,850,Metro Manila,CUST019,Physical Store,Cash,100,500,EMP004
+ORD021,2026-10-11,Wireless Mouse,Electronics,4,450,Central Luzon,CUST020,Online,GCash,0,280,EMP001
+ORD022,2026-10-11,Paper Ream,Stationery,12,250,Metro Manila,CUST021,Physical Store,Bank Transfer,200,170,EMP003
+ORD023,2026-10-12,Office Chair,Furniture,2,3500,Cebu,CUST022,Online,Bank Transfer,300,2200,EMP004
+ORD024,2026-10-12,USB Keyboard,Electronics,5,650,Davao,CUST023,Online,GCash,0,420,EMP002
+ORD050,2026-10-24,Paper Ream,Stationery,10,250,Davao,CUST049,Online,Maya,0,170,EMP001
