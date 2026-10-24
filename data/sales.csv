@@ -1,7 +1,6 @@
 order_id,date,product,category,quantity,unit_price,region
 
 
-order_id,date,product,category,quantity,unit_price,region
 ORD001,2026-10-01,Wireless Mouse,Electronics,3,450,Metro Manila
 ORD002,2026-10-01,USB Keyboard,Electronics,2,650,Metro Manila
 ORD003,2026-10-02,Notebook,Stationery,10,50,Central Luzon
