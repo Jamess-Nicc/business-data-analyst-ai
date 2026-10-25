@@ -83,6 +83,21 @@ class RevenueShareCategory:
         return net_rev_calc
 
 
+class GroupNetRevenueByCategory:
+    def __init__(self, df, net_revenue):
+        self.df = df
+        self.net_revenue = net_revenue
+        self.grouped_net_rev = None
+
+    def group_net_rev(self):
+        category = self.df["category"]
+
+        grouped_calc = self.net_revenue.groupby(category).sum()
+
+        self.grouped_net_rev = grouped_calc
+        return grouped_calc
+
+
 analyzer = SalesAnalyzer()
 analyzer.load_data()
 
@@ -102,3 +117,11 @@ print(f"Gross Sales: {gross_sale_output.gross_sales_func()}")
 
 net_rev_output = RevenueShareCategory(analyzer.df)
 print(f"Net Revenue: {net_rev_output.net_rev_func()}")
+
+revenue_analyzer = RevenueShareCategory(analyzer.df)
+
+net_revenue = revenue_analyzer.net_rev_func()
+
+category_analyzer = GroupNetRevenueByCategory(analyzer.df, net_revenue)
+
+print(f"Grouped Net Revenue: {category_analyzer.group_net_rev()}")
