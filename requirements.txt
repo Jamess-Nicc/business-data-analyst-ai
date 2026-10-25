@@ -1,3 +1,13 @@
 pandas-3.1.0
 numpy-2.5.4
 scipy-1.17.1
+transformers>=4.51.0
+accelerate
+torch
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+openpyxl
+python-dotenv

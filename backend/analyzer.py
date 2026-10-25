@@ -44,6 +44,45 @@ class CategoryAnalyzer:
         return cat_mode_result
 
 
+class ProductAnalyzer:
+    def __init__(self, df):
+        self.df = df
+        self.most_prod_shown = None
+
+    def product_mode(self):
+        product = self.df["product"]
+
+        prod_mode_result = product.value_counts(dropna=False)
+
+        self.most_prod_shown = prod_mode_result
+        return prod_mode_result
+
+
+class RevenueShareCategory:
+    def __init__(self, df):
+        self.df = df
+        self.gross_sales_total = None
+        self.net_rev_total = None
+
+    def gross_sales_func(self):
+        qty = self.df["quantity"]
+        unit_price = self.df["unit_price"]
+
+        gross_sales_calc = qty * unit_price
+
+        self.gross_sales_total = gross_sales_calc
+        return gross_sales_calc
+
+    def net_rev_func(self):
+        discounts = self.df["discount"]
+
+        gross_sales_got = self.gross_sales_func()
+        net_rev_calc = gross_sales_got - discounts
+
+        self.net_rev_total = net_rev_calc
+        return net_rev_calc
+
+
 analyzer = SalesAnalyzer()
 analyzer.load_data()
 
@@ -54,3 +93,12 @@ print(f"Average Revenue: ₱{average_revenue.avrgrev_func()}")
 
 mode_of_category = CategoryAnalyzer(analyzer.df)
 print(f"Most Frequent: {mode_of_category.category_mode()}")
+
+mode_of_product = ProductAnalyzer(analyzer.df)
+print(f"Most Frequent:{mode_of_product.product_mode()}")
+
+gross_sale_output = RevenueShareCategory(analyzer.df)
+print(f"Gross Sales: {gross_sale_output.gross_sales_func()}")
+
+net_rev_output = RevenueShareCategory(analyzer.df)
+print(f"Net Revenue: {net_rev_output.net_rev_func()}")
